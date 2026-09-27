@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Nothing leaves this site: no fonts, scripts, analytics or cookies (CH-137). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>GreenStock · local software library, kept current</title>
+  <meta name="description" content="GreenStock keeps a local library of the applications you deploy current, ready for every image you build.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <style>
+    :root {
+      --page: #EEF1EE;
+      --surface: #FFFFFF;
+      --border: #DDE4DE;
+      --text: #182620;
+      --secondary: #56655C;
+      --accent: #1B5E43;
+      --leaf: #3FA772;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0F1A15;
+        --surface: #14231C;
+        --border: #243A2F;
+        --text: #F4F2EC;
+        --secondary: #B9C2BC;
+        --accent: #6FCF97;
+        --leaf: #B7EBC9;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 620px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 56px 48px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--leaf));
+    }
+    h1 { margin: 0; }
+    .logo { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
+    .lead {
+      margin: 36px auto 0;
+      max-width: 30em;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--leaf);
+    }
+    footer {
+      padding: 24px 16px 32px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--secondary);
+    }
+    @media (max-width: 520px) {
+      .card { padding: 40px 24px 32px; }
+      .lead { font-size: 1.05rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>
+        <picture>
+          <source srcset="greenstock-lockup-dark.svg" media="(prefers-color-scheme: dark)">
+          <img class="logo" src="greenstock-lockup.svg" width="500" height="144" alt="GreenStock: local software library, kept current">
+        </picture>
+      </h1>
+      <p class="lead">The applications you deploy, kept current in a library of your own, ready for every image you build.</p>
+      <p class="status">In development</p>
+    </div>
+  </main>
+  <footer>© 2026 John Billekens Consultancy</footer>
+</body>
+</html>
